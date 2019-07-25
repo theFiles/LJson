@@ -42,9 +42,9 @@ public static LJson decode(String json)
 * `LJson`是两个子类在`decode()`时返回的结果对象
 
 > 基本用法
-1. `public LJson(T obj)` 通过 List/Map 转换成 LJson 对象
-2. `public T getObj()` 取结果对象的源对象 List/Map
-3. `public Object get(Object... keys)` 通过传入多个参数，依次深入（维度）取值
+> 1. `public LJson(T obj)` 通过 List/Map 转换成 LJson 对象
+> 2. `public T getObj()` 取结果对象的源对象 List/Map
+> 3. `public Object get(Object... keys)` 通过传入多个参数，依次深入（维度）取值
 
 ```java
 // 暂时不支持自定义对象取值（实现 ILJson 的对象）
@@ -97,8 +97,8 @@ public class User implements ILJson{ // 必须实现 ILJson
 **注意：自定义对象除了需要实现`ILJson`之外，还需要是一个规范的带有`getxxx()`方法的类，否则无法读取**
 
 > ILJson接口拓展
-1. `default Map getParam()` 获取实现接口的对象的所有属性和值
-2. `default boolean set(String,String)` 修改指定属性的值
+> 1. `default Map getParam()` 获取实现接口的对象的所有属性和值
+> 2. `default boolean set(String,String)` 修改指定属性的值
 
 ``` java
  // 一个规范实现了ILJson接口的类
