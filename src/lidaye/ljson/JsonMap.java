@@ -1,4 +1,4 @@
-package ljson;
+package lidaye.ljson;
 
 
 import java.util.HashMap;
@@ -46,6 +46,15 @@ public class JsonMap extends Json{
     }
 
     /**
+     * 通过实现了ILJson的实体对象转为json
+     * @param obj   对象
+     * @return      json字符串
+     */
+    public static String encode(ILJson obj){
+        return encode(obj.getParam(false));
+    }
+
+    /**
      * 把json字符串转成map
      * @param json      json字符串
      * @param beCheck   json字符串进行类型检测开关
@@ -77,7 +86,7 @@ public class JsonMap extends Json{
                         map.put(key,JsonList.getJsonList(value,false,errRep));
                         break;
 
-                    // module.ljson,递归
+                    // module.lidaye.ljson,递归
                     case 3:
                         map.put(key, getJsonMap(value, false,errRep));
                         break;

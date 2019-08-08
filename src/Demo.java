@@ -1,5 +1,5 @@
-import ljson.JsonMap;
-import ljson.LJson;
+import lidaye.ljson.JsonMap;
+import lidaye.ljson.LJson;
 
 import java.util.Map;
 
